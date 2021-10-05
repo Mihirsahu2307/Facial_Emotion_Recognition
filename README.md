@@ -1,12 +1,16 @@
 # Facial_Emotion_Recognition
-Several models were built and meticulously tested on the [FER-2013 dataset](https://www.kaggle.com/msambare/fer2013). Of all those models, 5 models have been presented in the repository to compare and analyze their performances.
+
+### Description:
+Several models were built and meticulously tested on the [FER-2013 dataset](https://www.kaggle.com/msambare/fer2013). Of all those models, 5 models have been presented in the repository and analyze their performances.
 The images are resized to 128 X 128 or 224 X 224 for some models.
+
+All models were also tested in real-time to compare their predictions for different emotions using a webcam.
 
 Code is provided in the Facial_Emotion_Recognition.ipynb notebook file. 
 
 ### Installations:
 
-* Install all dependencies:
+* Install all dependencies using requirements.txt like so:
 
 ```shell
 pip install -r requirements.txt
@@ -26,8 +30,8 @@ Model weights are provided in the folders of respective models. Their architectu
 An accuracy of nearly **50%** was achieved on the testing set. The following emotions can be easily detected with this model: happy, neutral, angry, and fear.
 * The models, model_mobilenet and model_resnet_FineTuned_Large, could achieve **over 60%** accuracy on the testing set. These models were trained on a Kaggle notebook using GPU and their optimal weights were saved and downloaded.
 The notebook can be found [here](https://www.kaggle.com/masterofsnippets/face-emotion-recognition)
-* Due to hardware limitations, the Resnet50 based model couldn't be tested on a live webcam. It should have a performance comparable to that of the MobileNetV2 based model.
-* The MobileNetV2 based model can easily detect most emotions on a live webcam. It also has the highest testing accuracy (**60.67%**) among all the models I tested.
+* Due to hardware limitations, the Resnet50 based model couldn't be tested in real-time. It should have a performance comparable to that of the MobileNetV2 based model.
+* The MobileNetV2 based model can easily detect most emotions in real-time. It also has the highest testing accuracy (**60.67%**) among all the models I tested.
 
 *Further analysis is provided in the notebook.*
 
@@ -41,5 +45,5 @@ a more memory-efficient code, one can train the models on an augmented training 
 *Following some or all of the above suggestions, I believe the accuracy of model_mobilenet or model_resnet_FineTuned_Large could easily go up to 65-70%*
 
 ### Credits:
-* The code for the live webcam was inspired from [this article](https://medium.com/analytics-vidhya/realtime-face-emotion-recognition-using-transfer-learning-in-tensorflow-3add4f4f3ff3)
-* For face detection, haarcascade_frontalface_default.xml was used.
+* [This](https://github.com/oarriaga/face_classification) repository provided helpful resources for this project.
+* The code for predicting in real-time was inspired from [this article](https://medium.com/analytics-vidhya/realtime-face-emotion-recognition-using-transfer-learning-in-tensorflow-3add4f4f3ff3)
