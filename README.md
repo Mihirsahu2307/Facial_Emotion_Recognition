@@ -36,13 +36,12 @@ The notebook can be found [here](https://www.kaggle.com/masterofsnippets/face-em
 *Further analysis is provided in the notebook.*
 
 ### Further Improvements:
-* Although the resnet and mobilenet based models were trained on Kaggle GPU, due to RAM limitations, I wasn't able to augment the data. With more RAM, or perhaps, with a 
-a more memory-efficient code, one can train the models on an augmented training set which could substantially improve the accuracy.
+* Although the resnet and mobilenet based models were trained on Kaggle GPU, due to RAM limitations, I wasn't able to augment the data. With more RAM, or perhaps, with a more memory-efficient code, one can train the models on an augmented training set which could substantially improve the accuracy.
 * I have also tuned the learning rate while testing the models but perhaps, more careful tuning of other hyperparameters may result in improved accuracy.
 * For the resnet based model, one can try freezing fewer or more layers and see if it improves the accuracy.
-* Changing the image size might help, but since the original images are too small, this would not make a huge difference.
+* Changing the size of the images might help, but since the original images are too small, this would not make a huge difference.
 
-*Following some or all of the above suggestions, I believe the accuracy of model_mobilenet or model_resnet_FineTuned_Large could easily go up to 65-70%*
+*Following some or all of the above suggestions, I believe the accuracies of model_mobilenet and model_resnet_FineTuned_Large could easily go up to 65-70%*
 
 ### Credits:
 * [This](https://github.com/oarriaga/face_classification) repository provided helpful resources for this project.
