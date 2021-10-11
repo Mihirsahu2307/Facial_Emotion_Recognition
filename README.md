@@ -43,9 +43,9 @@ The notebook can be found [here](https://www.kaggle.com/masterofsnippets/face-em
 ## Examples
 
 <p float="left">
-  <img src="https://github.com/Mihirsahu2307/Facial_Emotion_Recognition/blob/master/Examples/Happy_Predicted.jpg" width="400" />
-  <img src="https://github.com/Mihirsahu2307/Facial_Emotion_Recognition/blob/master/Examples/Surprise_Predicted.jpg" width="400" /> 
-  <img src="https://github.com/Mihirsahu2307/Facial_Emotion_Recognition/blob/master/Examples/Neutral_Predicted.jpg" width="400" />
+  <img src="https://github.com/Mihirsahu2307/Facial_Emotion_Recognition/blob/master/Examples/Happy_Predicted.jpg" width="500" />
+  <img src="https://github.com/Mihirsahu2307/Facial_Emotion_Recognition/blob/master/Examples/Surprise_Predicted.jpg" width="500" /> 
+  <img src="https://github.com/Mihirsahu2307/Facial_Emotion_Recognition/blob/master/Examples/Neutral_Predicted.jpg" width="500" />
 </p>
 
 ## Further Improvements
