@@ -1,14 +1,19 @@
 # Facial_Emotion_Recognition
 
 ### Description:
-Several models were built and meticulously tested on the [FER-2013 dataset](https://www.kaggle.com/msambare/fer2013). Of all those models, 5 models have been presented in the repository and analyze their performances.
-The images are resized to 128 X 128 or 224 X 224 for some models.
+Several models were built and they were trained on the [FER-2013 dataset](https://www.kaggle.com/msambare/fer2013). Of all those models, 5 models have been presented in the repository and their performances have been analyzed. All models were also tested in real-time to compare their predictions for different emotions using a webcam. Code is provided in the Facial_Emotion_Recognition.ipynb notebook file. 
 
-All models were also tested in real-time to compare their predictions for different emotions using a webcam.
+### Methodology:
 
-Code is provided in the Facial_Emotion_Recognition.ipynb notebook file. 
+**Preprocessing**: Images are resized to 128 X 128 or 224 X 224 for some models. Training, validation and testing sets are created.
 
-### Installations:
+**Training**: Models are trained on GPU and hyperparameters are tuned accordingly.
+
+**Face detection**: Haarcascade frontal face classifier is used to detect faces in the image.
+
+**Emotion Recognition**: Predictions are made on the detected faces.
+
+## Installation
 
 * Install all dependencies using requirements.txt like so:
 
@@ -21,10 +26,10 @@ pip install -r requirements.txt
 * Note that if you want to follow the notebook, you will have to make appropriate changes to the directory paths which should be trivial.
 
 
-### Model Architecture and Weights:
+## Model Architecture and Weights
 Model weights are provided in the folders of respective models. Their architectures can be found in the notebook.
 
-### Results:
+## Results
 * models 1 and 2 were trained locally on my PC with GPU (NVIDIA GeForce MX130). Due to hardware limitations, they couldn't be trained to their optimal state.
 * Model3, built from scratch, is a decent model that has relatively fewer parameters (654,335). It was also trained locally and various hyperparameters were tuned so that its accuracy reaches its optimum.
 An accuracy of nearly **50%** was achieved on the testing set. The following emotions can be easily detected with this model: happy, neutral, angry, and fear.
@@ -35,14 +40,28 @@ The notebook can be found [here](https://www.kaggle.com/masterofsnippets/face-em
 
 *Further analysis is provided in the notebook.*
 
-### Further Improvements:
-* Although the resnet and mobilenet based models were trained on Kaggle GPU, due to RAM limitations, I wasn't able to augment the data. With more RAM, or perhaps, with a more memory-efficient code, one can train the models on an augmented training set which could substantially improve the accuracy.
-* I have also tuned the learning rate while testing the models but perhaps, more careful tuning of other hyperparameters may result in improved accuracy.
+## Examples
+
+<p float="left">
+  <img src="https://github.com/Mihirsahu2307/Facial_Emotion_Recognition/blob/master/Examples/Happy_Predicted.jpg" width="300" />
+  <img src="https://github.com/Mihirsahu2307/Facial_Emotion_Recognition/blob/master/Examples/Surprise_Predicted.jpg" width="300" /> 
+  <img src="https://github.com/Mihirsahu2307/Facial_Emotion_Recognition/blob/master/Examples/Neutral_Predicted.jpg" width="300" />
+</p>
+
+## Further Improvements
+* Due to RAM limitations of Kaggle, I wasn't able to augment the training data. With more RAM, or perhaps, with a more memory-efficient code, one can train the models on an augmented training set which could substantially improve the accuracy.
+* I have also tuned the learning rate while testing the models but perhaps, more meticulous tuning of other hyperparameters may result in improved accuracy.
 * For the resnet based model, one can try freezing fewer or more layers and see if it improves the accuracy.
-* Changing the size of the images might help, but since the original images are too small, this would not make a huge difference.
 
 *Following some or all of the above suggestions, I believe the accuracies of model_mobilenet and model_resnet_FineTuned_Large could easily go up to 65-70%*
 
-### Credits:
+## To Be Added
+
+Easily accessible demo for real-time emotion recognition.
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## Acknowledgements
 * [This](https://github.com/oarriaga/face_classification) repository provided helpful resources for this project.
-* The code for predicting in real-time was inspired from [this article](https://medium.com/analytics-vidhya/realtime-face-emotion-recognition-using-transfer-learning-in-tensorflow-3add4f4f3ff3)
