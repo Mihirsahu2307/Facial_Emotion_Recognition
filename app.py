@@ -1,5 +1,5 @@
 from flask import Flask, render_template, Response, request
-from mobilenet_model import *
+from prediction_model import *
 from Scheduler import *
 import os
 import cv2
@@ -17,6 +17,7 @@ import time
 # Face detetction with DNN: 18-20
 # Face + emotion detection with DNN: 7
 # Face _ emotion detection (DNN) with threaded timer optimization: 15-19 (timer = 0.3s, calculated avg = 16 fps)
+# Fixed the incorrect prediction issue, still the naive algorithm with haar cascade had better real-time predictions (as in the notebook)
 
 global face_roi, status, fd_model, counter, prev_frame_time, new_frame_time, emotion_detect
 
@@ -109,13 +110,13 @@ def gen_frames():  # generate frame by frame from camera
         if success:
             # Calculating the fps
             new_frame_time = time.time()
-            try:
-                fps = 1/(new_frame_time-prev_frame_time)
-                prev_frame_time = new_frame_time
-                fps = int(fps)
-                print("FPS: ", fps)
-            except ZeroDivisionError as e:
-                pass
+            # try:
+            #     fps = 1/(new_frame_time-prev_frame_time)
+            #     prev_frame_time = new_frame_time
+            #     fps = int(fps)
+            #     print("FPS: ", fps)
+            # except ZeroDivisionError as e:
+            #     pass
                 
             frame = cv2.flip(frame,1)
             frame = detect_face(frame)
@@ -135,7 +136,7 @@ def gen_frames():  # generate frame by frame from camera
                 ret, buffer = cv2.imencode('.jpg', frame)
                 frame = buffer.tobytes()
                 yield (b'--frame\r\n'
-                       b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
+                       b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n') # HTTP format for images
             except Exception as e:
                 pass
         else:
