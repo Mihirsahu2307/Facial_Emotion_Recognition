@@ -9,7 +9,7 @@ Several models were built and they were trained on the [FER-2013 dataset](https:
 
 **Training**: Models are trained on GPU and hyperparameters are tuned accordingly.
 
-**Face detection**: Haarcascade frontal face classifier is used to detect faces in the image.
+**Face detection**: Haarcascade frontal face classifier or opencv DNN face detector is used to detect faces in the image.
 
 **Emotion Recognition**: Predictions are made on the detected faces.
 
@@ -21,7 +21,7 @@ Several models were built and they were trained on the [FER-2013 dataset](https:
 pip install -r requirements.txt
 ```  
 
-* **Git LFS** - To clone and use this repository, you'll need [Git Large File Storage (LFS)](https://git-lfs.github.com/).
+* **Git LFS** - (Can be skipped) To clone and use this repository, you'll need [Git Large File Storage (LFS)](https://git-lfs.github.com/).
 
 * Note that if you want to follow the notebook, you will have to make appropriate changes to the directory paths which should be trivial.
 
@@ -33,7 +33,7 @@ pip install -r requirements.txt
 python app.py
 ```  
 
-* Open the http://127.0.0.1:5000/ on any browser
+* Open http://127.0.0.1:5000/ on any browser
 
 ## Model Architecture and Weights
 Model weights are provided in the folders of respective models. Their architectures can be found in the notebook.
@@ -50,12 +50,9 @@ The notebook can be found [here](https://www.kaggle.com/masterofsnippets/face-em
 *Further analysis is provided in the notebook.*
 
 ## Examples
+![Happy_Predicted](https://user-images.githubusercontent.com/74849707/209437246-b56afb1d-7645-42c5-b1b3-bb93352c79c8.jpg)
 
-<p float="left">
-  <img src="https://github.com/Mihirsahu2307/Facial_Emotion_Recognition/blob/master/Examples/Happy_Predicted.jpg" width="500" />
-  <img src="https://github.com/Mihirsahu2307/Facial_Emotion_Recognition/blob/master/Examples/Surprise_Predicted.jpg" width="500" /> 
-  <img src="https://github.com/Mihirsahu2307/Facial_Emotion_Recognition/blob/master/Examples/Neutral_Predicted.jpg" width="500" />
-</p>
+![Surprise_Predicted](https://user-images.githubusercontent.com/74849707/209437264-5fbe12dd-ded8-4ea5-922d-1bfab59bccff.jpg)
 
 ## Further Improvements
 * Due to RAM limitations of Kaggle, I wasn't able to augment the training data. With more RAM, or perhaps, with a more memory-efficient code, one can train the models on an augmented training set which could substantially improve the accuracy.
