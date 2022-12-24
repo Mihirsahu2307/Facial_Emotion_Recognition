@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type = "text/css" href="styles.css">
+    <title>Real Time Facial Emotion Recognition</title>
+</head>
+<body>
+    <h1>Real Time Facial Emotion Recognition</h1>
+        <form method="post" action="{{ url_for('user_input') }}">
+        <input type="submit" value="Detect Emotion On/Off" name="detect_emotion"/>
+        </form>
+
+
+    <img src="{{ url_for('video_feed') }}" height="80%">
+</body>
+</html>
