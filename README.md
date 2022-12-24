@@ -1,7 +1,7 @@
 # Facial_Emotion_Recognition
 
 ### Description:
-Several models were built and they were trained on the [FER-2013 dataset](https://www.kaggle.com/msambare/fer2013). Of all those models, 5 models have been presented in the repository and their performances have been analyzed. All models were also tested in real-time to compare their predictions for different emotions using a webcam. Code is provided in the Facial_Emotion_Recognition.ipynb notebook file. 
+Several models were built and they were trained on the [FER-2013 dataset](https://www.kaggle.com/msambare/fer2013) and their performances were compared. Further, these models were used to build a web application for real-time facial emotion recognition with optimized frame rate.
 
 ### Methodology:
 
@@ -25,6 +25,15 @@ pip install -r requirements.txt
 
 * Note that if you want to follow the notebook, you will have to make appropriate changes to the directory paths which should be trivial.
 
+### How to use:
+
+* Use the following command to run the app.py file
+
+```shell
+python app.py
+```  
+
+* Open the http://127.0.0.1:5000/ on any browser
 
 ## Model Architecture and Weights
 Model weights are provided in the folders of respective models. Their architectures can be found in the notebook.
