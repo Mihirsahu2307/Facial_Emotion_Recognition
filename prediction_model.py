@@ -9,7 +9,7 @@ import os
 
 classes_num = 7
 img_size = 224
-Project_DIR = "C:\\Users\\USER\\Desktop\\ML-Projects\\Face_Emotion_Recognition"
+Project_DIR = "" # Earlier it was set to local directory path
 mobilenet_model = tf.keras.applications.MobileNetV2(input_shape=(img_size, img_size, 3), include_top=False, weights='imagenet')
 
 model6 = Sequential()
