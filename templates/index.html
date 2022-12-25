@@ -9,13 +9,15 @@
 
     <style>
         h1 {
-            text-transform:uppercase;
             text-align: center;
-            font-family: sans-serif;
+            font-family: Helvetica;
+            color: #dcd2d9;
+            font-weight: 50;
         }
 
         body{
             text-align: center;
+            background-color: #2e2e31;
         }
         form {
             display: inline-block;
@@ -27,7 +29,7 @@
             height:40px;
             width: auto;
             margin: 1rem 0;
-            background:#2e2e31;
+            background:#60447A;
             color: #fff;
             font-size:18px;
             border-radius:5px;
@@ -35,31 +37,37 @@
         }
         .input-form input[type="submit"]:hover{
             cursor:pointer;
-            background:#3498DB;
-            color:#000;
+            background:#671458;
         }
 
         #toggleBtn{
             margin: 1rem 0;
         }
 
-        .video-stream {
+        .video-stream{
             padding: 1rem;
-            outline: solid 3px #2e2e31;
+            outline: solid 1px #a893a5;
             display: block;
             margin-left: auto;
-            margin-right: auto
+            margin-right: auto;
+            margin-top: 2rem;
+        }
+
+        hr.solid{
+            color: #5b1f50;
         }
     </style>
 </head>
 <body>
     <h1>Real Time Facial Emotion Recognition</h1>
-        <div class = "input-form">
-            <form method="post" action="{{ url_for('user_input') }}">
-            <input type="submit" value="Detect Emotion On/Off" name="detect_emotion" id = "toggleBtn"/>
-            </form>
-        </div>
+    <hr class="solid">
 
     <img src="{{ url_for('video_feed') }}" height="80%" class = "video-stream">
+
+    <div class = "input-form">
+        <form method="post" action="{{ url_for('user_input') }}">
+        <input type="submit" value="Detect Emotion On/Off" name="detect_emotion" id = "toggleBtn"/>
+        </form>
+    </div>
 </body>
 </html>
